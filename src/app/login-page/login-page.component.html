@@ -1,0 +1,19 @@
+<div class="container-form">
+  <div class="content-input">
+    <form [formGroup]="loginForm">
+      <div class="flex-label-input">
+        <label for="username">Usuário: </label>
+        <input type="text" id="username" formControlName="username">
+      </div>
+      <div class="flex-label-input">
+        <label for="password">Senha: </label>
+        <input type="{{tipoInputPassword}}" id="password" formControlName="password">
+        <button id="hidden-contol" (click)="Show()"><img src="eye.png" alt="" class="eye-img"></button>
+      </div>
+
+    </form>
+  </div>
+  <div class="content-button-result">
+    <button (click)="Autenticar()">Autenticar</button>
+  </div>
+</div>
