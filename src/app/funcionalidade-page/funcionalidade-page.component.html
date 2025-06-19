@@ -1,3 +1,4 @@
+<button id="back-page-btn" [routerLink]="['/home']"><img src="arrow.png" alt=""></button>
 <div class="container">
     <app-create-input (requisicao)="EnviarInput($event)"></app-create-input>
     <app-historico [novaMensagem]="requisicao"></app-historico>

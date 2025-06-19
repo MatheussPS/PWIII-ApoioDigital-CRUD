@@ -4,3 +4,15 @@
     justify-content: center;
     flex-direction: column;
 }
+
+
+#back-page-btn{
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    margin-left: 1em;
+}
+
+#back-page-btn > img{
+    width: 3em;
+}

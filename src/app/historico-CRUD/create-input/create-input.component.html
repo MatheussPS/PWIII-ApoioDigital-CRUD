@@ -1,4 +1,4 @@
-  <div class="select-container">
+<div class="select-container">
   <label for="input-select" class="quest">Com o quê precisa de ajuda?</label>
   <form [formGroup]="inputUserForm">
     <select name="select-option" id="input-select" formControlName="ajuda">
@@ -11,10 +11,10 @@
     </select>
   </form>
 
-  <button id="submit-select-user-btn" type="button" [disabled]="inputUserForm.invalid" (click)="EnviarInput()">Enviar</button>
+  <button id="submit-select-user-btn" type="button" [disabled]="inputUserForm.invalid"
+    (click)="EnviarInput()">Enviar</button>
 
-  <div [hidden]="!inputUserForm.get('ajuda')?.invalid">
+  <div class="select" [hidden]="!inputUserForm.get('ajuda')?.invalid">
     <p style="color:red;">Por favor, selecione uma opção.</p>
   </div>
 </div>
-

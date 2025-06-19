@@ -1,10 +1,16 @@
-.container, .banner-container, .banner-content, .banner-p-bnt-container {
+.container, .banner-container, .banner-content, .banner-p-bnt-container, .welcome-p-tbl {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.welcome-p-tbl{
+  flex-direction: column;
+  padding: 1em;
+}
+
 .welcome-p {
+  margin: .5em;
   font-size: 2em;
 }
 
@@ -33,17 +39,12 @@ img {
 
 .banner-p-bnt-container {
   flex-direction: column;
-  margin-top: -7em;
 }
 
 .banner-p {
   color: #127BF3;
   font-weight: bolder;
   font-size: 900%;
-}
-
-.banner-btn {
-  margin-top: -8em; 
 }
 
 #btn-banner-access {

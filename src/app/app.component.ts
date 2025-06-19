@@ -5,34 +5,26 @@ import { HistoricoComponent } from './historico-CRUD/historico/historico.compone
 import { CreateInputComponent } from './historico-CRUD/create-input/create-input.component';
 import { FuncionalidadePageComponent } from './funcionalidade-page/funcionalidade-page.component';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { Router,NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [LoginPageComponent, HomeComponent, HistoricoComponent, CreateInputComponent, FuncionalidadePageComponent, RouterOutlet],
+  imports: [LoginPageComponent, HomeComponent, HistoricoComponent, CreateInputComponent, FuncionalidadePageComponent, RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'ApoioDigitalCRUD';
+  showHeader = true;
 
-  accessFunc: boolean = true;
-  access: boolean = false;
-  nome: string = '';
-
-
-  Autenticar(value: boolean) {
-    this.access = value
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        const currentUrl = event.urlAfterRedirects;
+        this.showHeader = !currentUrl.includes('/login');
+      }
+    });
   }
 
-  GetUserName(value: string) {
-    this.nome = value
-  }
-
-  AcessarFuncionalidades(value: boolean) {
-    this.accessFunc = value;
-  }
-
-  Back() {
-    this.accessFunc = true;
-  }
 }

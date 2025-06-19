@@ -1,79 +1,86 @@
-.container-form{
-  width: 100%;
+.container-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 10%;
 }
 
-.logo-img{
+.logo-img {
   width: 10em;
+  margin-bottom: 1em;
 }
 
-#hidden-contol{
-  border: 1px solid #000;
-  border-radius: 25%;
+#hidden-contol {
+  border: none;
   margin-left: .5em;
   background-color: #fff;
 }
 
-#hidden-contol > img{
-  width: 2em;
+#hidden-contol>img {
+  width: 2.5em;
+  height: 2em;
 }
 
-.eye-img{
-  width: 100%;
-}
-
-.flex-label-input{
+.flex-label-input {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-
-.cabecalho-inputs{
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    flex-direction: column;
-}
-.username-input{
+h2 {
   margin-bottom: 1em;
 }
 
-input{
-  width: 15vw;
-  height: 3vh;
-  border: 1.9px solid #000;
-  border-radius: 8px;
-}
-
-input::placeholder{
-  font-weight: bolder;
-  font-size: 12px;
-}
-
-.content-button-result{
-  margin-top: 1em;
+.cabecalho-inputs {
   display: flex;
   justify-content: left;
+  align-items: left;
+  flex-direction: column;
 }
 
-.content-button-result > button{
+.username-input {
+  margin-bottom: 1em;
+}
+
+input {
+  width: 20vw;
+  height: 4vh;
+  border: 1.9px solid #000;
+  border-radius: 20px;
+}
+
+input,
+input::placeholder {
+  padding: 1em;
+}
+
+input::placeholder {
+  color: #000;
+  font-size: 20px;
+}
+
+.content-button-result {
+  margin-top: 1em;
+}
+
+.content-button-result>button {
   width: 10vw;
-    height: 4vh;
-    border-radius: 8px;
-    background-color: #127BF3;
-    color: #fff;
-    font-size: 1em;
-    font-weight: bold;
-    border: 1px solid #127BF3;
-    transition: all 0.2s ease-in-out;
-    margin-left: -3em;
+  height: 4vh;
+  border-radius: 20px;
+  background-color: #127BF3;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  border: 1px solid #127BF3;
+  transition: all 0.2s ease-in-out;
 }
 
-.content-button-result > button:hover{
+.content-button-result>button:hover {
   background-color: #fff;
   color: #127BF3;
+}
+
+.wrog-login{
+  margin-top: 1em;
 }

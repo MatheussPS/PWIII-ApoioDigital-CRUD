@@ -10,13 +10,3 @@
 app-create-input{
     margin-top: 2em;
 }
-
-#back-page-btn{
-    border: none;
-    background-color: #fff;
-    position: fixed;
-}
-
-#back-page-btn > img{
-    width: 3em;
-}

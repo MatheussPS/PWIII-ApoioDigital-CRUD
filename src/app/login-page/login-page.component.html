@@ -19,4 +19,7 @@
   <div class="content-button-result">
     <button (click)="Autenticar()">Autenticar</button>
   </div>
+  <div class="wrog-login" [hidden] = "!wrong" >
+    <p style="color:red;">Por favor, insira as credenciais corretas</p>
+  </div>
 </div>

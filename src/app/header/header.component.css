@@ -1,0 +1,33 @@
+#header-container{
+    width: 100%;
+    background-color: #127BF3;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+
+.header-content{
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a> img{
+    width: 220px !important;
+    height: 80px !important;
+}
+
+nav{
+    padding: 1em;
+}
+
+a{
+    font-size: 2em;
+    margin: 0 1em 1em 0;
+    text-decoration: none;
+    color: #fff;
+}

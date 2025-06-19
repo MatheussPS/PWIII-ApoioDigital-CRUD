@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink, RouterOutlet, Router } from '@angular/router';
+import { credentials } from '../login-page/credentials-data';
 
 @Component({
   selector: 'app-home',
@@ -8,16 +9,16 @@ import { RouterLink, RouterOutlet, Router } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  @Input() nomeUser = ""
+  nomeUser = ""
   @Output() accessFunc = new EventEmitter()
 
-  AcessarFuncionalidades(){
-    this.accessFunc.emit(false)
-  }
 
   constructor(private router: Router) {
-  const nav = this.router.getCurrentNavigation();
-  this.nomeUser = nav?.extras?.state?.['nomeUser'] ?? '';
+    const nomeSalvo = sessionStorage.getItem('nomeUser');
+    if (nomeSalvo && nomeSalvo.trim() !== '') {
+      this.nomeUser = nomeSalvo;
+    }
+
+  }
 }
 
-}

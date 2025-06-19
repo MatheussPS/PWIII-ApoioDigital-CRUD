@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output, } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { Router } from '@angular/router';
+import { credentials } from './credentials-data';
 
 @Component({
   selector: 'app-login-page',
@@ -10,13 +11,9 @@ import { Router } from '@angular/router';
   standalone: true
 })
 export class LoginPageComponent {
+  wrong: boolean = false
   @Output() access = new EventEmitter();
   tipoInputPassword = "password"
-
-  credentials = {
-    username: "matheus01",
-    password: "password123"
-  }
 
   @Output() nome =  new EventEmitter();
 
@@ -30,13 +27,13 @@ export class LoginPageComponent {
   }
 
   Autenticar(){
-    if(this.loginForm.value.username == this.credentials.username && this.loginForm.value.password == this.credentials.password){
-      this.access.emit(true)
-      this.GetUserName()
+    sessionStorage.setItem('nomeUser', credentials.username);
+    
+    if(this.loginForm.value.username == credentials.username && this.loginForm.value.password == credentials.password){
       this.router.navigate(['/home']);
-      this.router.navigate(['/home'], { state: { nomeUser: this.credentials.username } });
+      
     }else{
-      this.access.emit(false)
+      this.wrong = true
     }
   }
 
@@ -51,7 +48,7 @@ export class LoginPageComponent {
   }
 
   GetUserName(){
-    this.nome.emit(this.credentials.username)
+    this.nome.emit(credentials.username)
   }
 
 }
