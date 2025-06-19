@@ -1,0 +1,19 @@
+.historico{
+    margin-top: 2em;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 2em;
+}
+
+li{
+    margin: .5em;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+button > img{
+    width: 1.5em;
+}

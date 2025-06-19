@@ -1,13 +1,16 @@
 <div class="container-form">
   <div class="content-input">
+    <div class="cabecalho-inputs">
+        <img class=" logo-img" src="logo-blue.png" alt="">
+        <h2>Conecte-se à sua conta!</h2>
+    </div>
+
     <form [formGroup]="loginForm">
       <div class="flex-label-input">
-        <label for="username">Usuário: </label>
-        <input type="text" id="username" formControlName="username">
+        <input type="text" id="username" class= "username-input"formControlName="username" placeholder="Usuário">
       </div>
       <div class="flex-label-input">
-        <label for="password">Senha: </label>
-        <input type="{{tipoInputPassword}}" id="password" formControlName="password">
+        <input type="{{tipoInputPassword}}" id="password" formControlName="password" placeholder="Senha">
         <button id="hidden-contol" (click)="Show()"><img src="eye.png" alt="" class="eye-img"></button>
       </div>
 

@@ -1,0 +1,38 @@
+<div class="historico">
+  <h2>Histórico de Perguntas</h2>
+  <hr>
+  @if (todayH.length > 0) {
+  <h3>Hoje</h3>
+  @for (item of todayH; track $index) {
+  <p>
+    {{ item.mensagem }} - {{ item.timeStamp }}
+    <button (click)="Deletar(item)"><img src="lixeira.png" alt="Excluir" /></button>
+  </p>
+  }
+  }
+
+  @if (lastDaysH.length > 0) {
+  <h3>Últimos 7 dias</h3>
+  @for (item of lastDaysH; track $index) {
+  <p>
+    {{ item.mensagem }} - {{ item.timeStamp }}
+    <button (click)="Deletar(item)"><img src="lixeira.png" alt="Excluir" /></button>
+  </p>
+  }
+  }
+
+  @if (lastH.length > 0) {
+  <h3>Meses Anteriores</h3>
+  @for (item of lastH; track $index) {
+  <p>
+    {{ item.mensagem }} - {{ item.timeStamp }}
+    <button (click)="Deletar(item)"><img src="lixeira.png" alt="Excluir" /></button>
+  </p>
+  }
+  }
+
+  @if (historico.length == 0) {
+  <p>Parece que seu histórico está vazio...</p>
+  }
+
+</div>
