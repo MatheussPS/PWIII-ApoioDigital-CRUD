@@ -1,0 +1,60 @@
+.about-tcc-container, .about-tcc-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-text>p{
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.title{
+    color: #127BF3;
+}
+
+/* .about-tcc-content{
+    background-color: #127BF3;
+    border-radius: 20px;
+} */
+
+.about-content{
+    width: 50%;
+    border: 2px solid #127BF3;
+    border-radius: 50px;
+    font-size: 1.5em;
+    margin-bottom: 3em;
+    /* background-color: #fff; */
+}
+
+.what-is-container{
+    margin-top: 3em;
+    margin-left: -30%;
+}
+
+.principal-public-container{
+    margin-right: -30%;
+}
+
+.what-is{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-text{
+    padding: 2em;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.text-about{
+    margin-top: 1em;
+}
+
+span{
+    font-weight: bold;
+}
