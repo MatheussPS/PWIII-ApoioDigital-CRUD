@@ -6,11 +6,12 @@ import { CreateInputComponent } from './historico-CRUD/create-input/create-input
 import { FuncionalidadePageComponent } from './funcionalidade-page/funcionalidade-page.component';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 import { Router,NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [LoginPageComponent, HomeComponent, HistoricoComponent, CreateInputComponent, FuncionalidadePageComponent, RouterOutlet, HeaderComponent],
+  imports: [LoginPageComponent, HomeComponent, HistoricoComponent, CreateInputComponent, FuncionalidadePageComponent, RouterOutlet, HeaderComponent, ContactPageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
