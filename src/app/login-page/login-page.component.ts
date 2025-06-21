@@ -47,8 +47,12 @@ export class LoginPageComponent {
     this.tipoInputPassword = this.tipoInputPassword == "password"? "text": "password"
   }
 
-  GetUserName(){
-    this.nome.emit(credentials.username)
+  EsqueceuSenha(){
+    alert(`Esqueceu a senha, senhor(a)? Aqui vai hein... Sua senha é ${credentials.password}`)
   }
+
+  // GetUserName(){
+  //   this.nome.emit(credentials.username)
+  // }
 
 }

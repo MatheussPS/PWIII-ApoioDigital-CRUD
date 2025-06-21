@@ -1,10 +1,21 @@
-.container, .banner-container, .banner-content, .banner-p-bnt-container, .welcome-p-tbl {
+.container,
+.banner-container,
+.banner-content,
+.banner-p-bnt-container,
+.welcome-p-tbl,
+.about-app-container,
+.app-content,
+.about-h-img,
+.login-content,
+.imgs-login,
+.img-container-login,
+.design-thanks-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.welcome-p-tbl{
+.welcome-p-tbl {
   flex-direction: column;
   padding: 1em;
 }
@@ -14,7 +25,8 @@
   font-size: 2em;
 }
 
-.tbl-hist-p, .tb-hist-p {
+.tbl-hist-p,
+.tb-hist-p {
   font-size: 1.2em;
 }
 
@@ -23,7 +35,7 @@
   color: #000;
 }
 
-.container{
+.container {
   flex-direction: column;
 }
 
@@ -65,6 +77,112 @@ img {
   transition: all 0.4s ease-in-out;
 }
 
+.about-app-container {
+  flex-direction: column;
+  margin-top: 5em;
+  background-color: #127BF3;
+  border-radius: 10vh 10vh 0 0;
+}
+
+.about-h-img {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.about-app-img{
+  width: 30vw;
+}
+
+.app-content {
+  padding: 8em;
+}
+
+.title-about {
+  font-size: 5em;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.about {
+  color: #fff;
+  flex-direction: column;
+}
+
+.img-container-login {
+  flex-direction: column;
+}
+
+.arrow-login-home {
+  margin: 10vh;
+}
+
+.arrow-login-home>img {
+  width: 20em;
+}
+
+.imgs-login {
+  margin-left: 10%;
+}
+
+.how-it-works,
+.how-it-works-login,
+.how-it-works-config,
+.how-it-works-user-app   {
+  font-size: 2em;
+  letter-spacing: 1.5px;
+}
+
+.how-it-works {
+  width: 50%;
+  text-align: left;
+  line-height: 1.5;
+
+}
+
+.how-it-works-login {
+  width: 45%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.img-home {
+  margin-top: 10%;
+}
+
+.p-how {
+  margin-top: 1em;
+}
+
+.config-content{
+  margin-top: 5vh;
+}
+
+.row-reverse{
+  flex-direction: row-reverse !important;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.row-reverse> .text{
+  width: 40%;
+  text-align: right;
+  margin-top: -30%;
+}
+
+.text-user-app{
+  margin-top: -20%;
+}
+
+.how-it-works-user-app{
+  width: 60%;
+}
+
+.thanks{
+  color: #127BF3;
+  font-size: 10em;
+  font-weight: bold;
+  padding: 2em;
+}
 @media only screen and (max-width: 750px) {
   .banner-content {
     flex-direction: column;

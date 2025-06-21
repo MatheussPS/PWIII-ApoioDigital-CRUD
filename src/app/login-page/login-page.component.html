@@ -1,25 +1,31 @@
 <div class="container-form">
-  <div class="content-input">
-    <div class="cabecalho-inputs">
+  <div class="content-form">
+    <div class="content-input">
+      <div class="cabecalho-inputs">
         <img class=" logo-img" src="logo-blue.png" alt="">
         <h2>Conecte-se à sua conta!</h2>
+      </div>
+
+      <form [formGroup]="loginForm">
+        <div class="flex-label-input">
+          <input type="text" id="username" class="username-input" formControlName="username" placeholder="Usuário">
+        </div>
+        <div class="flex-label-input">
+          <input type="{{tipoInputPassword}}" id="password" formControlName="password" placeholder="Senha">
+          <button id="hidden-contol" (click)="Show()"><img src="eye.png" alt="" class="eye-img"></button>
+        </div>
+
+      </form>
     </div>
-
-    <form [formGroup]="loginForm">
-      <div class="flex-label-input">
-        <input type="text" id="username" class= "username-input"formControlName="username" placeholder="Usuário">
+    <div class="confirm-container">
+      <div class="content-button-result">
+        <button (click)="Autenticar()">Autenticar</button>
       </div>
-      <div class="flex-label-input">
-        <input type="{{tipoInputPassword}}" id="password" formControlName="password" placeholder="Senha">
-        <button id="hidden-contol" (click)="Show()"><img src="eye.png" alt="" class="eye-img"></button>
-      </div>
+      <a (click) = "EsqueceuSenha()">Esqueceu sua senha?</a>
+    </div>
+    <div class="wrog-login" [hidden]="!wrong">
+      <p style="color:red;">Por favor, insira as credenciais corretas</p>
+    </div>
+  </div>
 
-    </form>
-  </div>
-  <div class="content-button-result">
-    <button (click)="Autenticar()">Autenticar</button>
-  </div>
-  <div class="wrog-login" [hidden] = "!wrong" >
-    <p style="color:red;">Por favor, insira as credenciais corretas</p>
-  </div>
 </div>

@@ -74,6 +74,7 @@ input::placeholder {
   font-weight: bold;
   border: 1px solid #127BF3;
   transition: all 0.2s ease-in-out;
+  margin-bottom: 1em;
 }
 
 .content-button-result>button:hover {
@@ -83,4 +84,8 @@ input::placeholder {
 
 .wrog-login{
   margin-top: 1em;
+}
+
+a{
+  text-decoration: underline;
 }
