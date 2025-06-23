@@ -18,9 +18,24 @@ export class CreateInputComponent {
     });
   }
 
+  frasesInterativas: string[] = [
+    'Quero ajuda com',
+    'Preciso de ajuda com',
+    'Gostaria de ajuda com',
+    'Me ajuda com',
+    'Tenho dúvida sobre'
+  ];
+
   EnviarInput() {
       // alert(`Enviada uma requisição de: ${this.inputUserForm.get("ajuda")?.value}`);
-      this.requisicao.emit(this.inputUserForm.get("ajuda")?.value);
+      this.requisicao.emit(`${this.EscolherFrase()} ${this.inputUserForm.get("ajuda")?.value}`);
+  }
+
+  EscolherFrase(){
+    const fraseAleatoria = this.frasesInterativas[
+        Math.floor(Math.random() * this.frasesInterativas.length)
+      ];
+    return fraseAleatoria.toLocaleUpperCase()
   }
 
 }

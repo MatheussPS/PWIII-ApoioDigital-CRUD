@@ -48,7 +48,7 @@ export class LoginPageComponent {
   }
 
   EsqueceuSenha(){
-    alert(`Esqueceu a senha, senhor(a)? Aqui vai hein... Sua senha é ${credentials.password}`)
+    alert(`Esqueceu a senha, senhor(a)? Aqui vai hein... Sua senha é ${credentials.password}, mas não conta pra ninguém, beleza?`)
   }
 
   // GetUserName(){

@@ -22,7 +22,7 @@ export class HistoricoComponent implements OnChanges, OnInit {
     if (!this.historico.some(item => item.mensagem.trim().toLowerCase() === `quero ajuda com ${this.novaMensagem.trim().toLowerCase()}`)
     ) {
       this.historico.unshift({
-        mensagem: `Quero ajuda com ${this.novaMensagem.trim().toLowerCase()}`,
+        mensagem:  this.novaMensagem.charAt(0).toUpperCase()+ this.novaMensagem.slice(1).toLowerCase(),
         timeStamp: this.hoje
       });
       this.Categorizar();
