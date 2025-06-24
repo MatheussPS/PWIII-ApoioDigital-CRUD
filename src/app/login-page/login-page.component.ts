@@ -28,16 +28,16 @@ export class LoginPageComponent {
 
   Autenticar(){
     sessionStorage.setItem('nomeUser', credentials.username);
-    
+
     if(this.loginForm.value.username == credentials.username && this.loginForm.value.password == credentials.password){
       this.router.navigate(['/home']);
-      
+
     }else{
       this.wrong = true
     }
   }
 
-  
+
   Show(){
     if(this.loginForm.get('password')?.value == ""){
       this.tipoInputPassword = "password"
@@ -48,7 +48,7 @@ export class LoginPageComponent {
   }
 
   EsqueceuSenha(){
-    alert(`Esqueceu a senha, senhor(a)? Aqui vai hein... Sua senha é ${credentials.password}, mas não conta pra ninguém, beleza?`)
+    alert(`Esqueceu a senha, ${credentials.username}? Aqui vai hein... Sua senha é ${credentials.password}, mas não conta pra ninguém, beleza?`)
   }
 
   // GetUserName(){
